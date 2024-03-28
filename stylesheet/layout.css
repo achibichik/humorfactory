@@ -372,7 +372,7 @@ body {
 }
 #fifthScreen {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-top: 180px;
     margin-left: 30px;
     gap: 8px;
@@ -382,13 +382,27 @@ body {
     margin-left: -76px;
     margin-right: 22px;
 }
+#groupFirst, #groupSecond, #groupThird{
+    display: none;
+    position: absolute;
+    bottom: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#cars {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
 #carFirst, #carThird {
     width: 393px;
     height: 238px;
     background-image: url('../images/darkCar.svg');
+    position: relative;
 }
 #carSecond {
     width: 393px;
     height: 238px;
     background-image: url('../images/lightCar.svg');
+    position: relative;
 }

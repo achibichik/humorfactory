@@ -1,7 +1,8 @@
-// Устанавливаем изначальные значения
 let counter1 = 1000;
 let counter2 = 0;
 let counter3 = 0;
+let currentBackgroundIndex = 0;
+const resoursesInHeart = new Set()
 
 // Функция для обновления счетчика на странице
 function updateCounter(counterId, value) {
@@ -54,7 +55,6 @@ function adjustWidth(boxId) {
     // Обновляем ширину svg
     svg.setAttribute('width', newWidth + '%');
 }
-
 document.addEventListener("DOMContentLoaded", function() {
     var heartCenter = document.getElementById('heartCenter');
     var resurses = document.getElementById('resurses');
@@ -67,8 +67,8 @@ document.addEventListener("DOMContentLoaded", function() {
         "url(./images/Step5.svg)",
         "url(./images/Step6.svg)",
     ];
-    let currentBackgroundIndex = 0;
-
+    let numberOfImagesMoved = 0; // Переменная для подсчета перемещенных изображений
+    
     // Функция для перетаскивания изображений
     var draggingElement = null;
     var initialX = 0;
@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
         draggingElement = event.target;
         initialX = event.clientX - draggingElement.offsetLeft;
         initialY = event.clientY - draggingElement.offsetTop;
+        numberOfImagesMoved++; // Увеличиваем счетчик перемещенных изображений
     }
 
     function drag(event) {
@@ -88,11 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
             draggingElement.style.left = newX + 'px';
             draggingElement.style.top = newY + 'px';
         }
-    
     }
-
-    // Переменная для хранения количества перетащенных изображений
-    let numberOfImagesMoved = 0;
 
     function endDrag(event) {
         if (draggingElement) {
@@ -100,24 +97,33 @@ document.addEventListener("DOMContentLoaded", function() {
             switchBackground(); // Переключаем фон независимо от того, куда отпущена мышь
             
             // Уменьшаем counter3 на 20 за каждый перемещенный img
-            counter3 -= 20;
+            counter3 -= numberOfImagesMoved * 20;
             updateCounter('counter3', counter3);
-
-            // Скрываем перетаскиваемое изображение
-            event.target.style.display = 'none';
-
-            // Увеличиваем счетчик перемещенных изображений
-            numberOfImagesMoved++;
         }
         draggingElement = null;
+        numberOfImagesMoved = 0; // Сбрасываем счетчик перемещенных изображений
+    }
+
+    function switchBackground() {
+        currentBackgroundIndex = (currentBackgroundIndex + 1) % backgroundImages.length;
+        heartCenter.style.backgroundImage = backgroundImages[currentBackgroundIndex];
     }
 
     // Функция для обновления видимости изображений в зависимости от значения counter3
     function updateResourceVisibility() {
         var resources = document.querySelectorAll('#resurses img');
+        var heartCenter = document.getElementById('heartCenter');
+        const heartRect = heartCenter.getBoundingClientRect()
         resources.forEach(function(img, index) {
+            const imgRect = img.getBoundingClientRect()
+            const isInHeart = imgRect.left >= heartRect.left && imgRect.right <= heartRect.right && imgRect.top >= heartRect.top && imgRect.bottom <= heartRect.bottom
+            if (isInHeart) {
+                resoursesInHeart.add(img)
+            } else if (img.style.display != 'none') {
+                resoursesInHeart.delete(img)
+            }
             var threshold = (index + 1) * 20;
-            if (counter3 >= threshold) {
+            if (counter3 >= threshold && !resoursesInHeart.has(img)) {
                 img.style.display = 'block';
             } else {
                 img.style.display = 'none';
@@ -128,6 +134,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Скрываем #pillsLeft и #pillsRight при загрузке страницы
     document.getElementById('pillsLeft').style.display = 'none';
     document.getElementById('pillsRight').style.display = 'none';
+
 
     // Функция для обработки нажатия на изображения в #pillsLeft и #pillsRight
     function handlePillClick(event) {
@@ -159,10 +166,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Вызываем функцию обновления видимости изображений при загрузке страницы
-    updateResourceVisibility();
-
-    // Добавление обработчиков событий для перетаскивания
+    // Добавление обработчиков событий
     resurses.addEventListener('mousedown', startDrag);
     document.addEventListener('mousemove', drag);
     document.addEventListener('mouseup', endDrag);
@@ -170,3 +174,40 @@ document.addEventListener("DOMContentLoaded", function() {
     // Обновляем видимость изображений при изменении counter3
     setInterval(updateResourceVisibility, 100); // Вызываем функцию каждые 100 миллисекунд для обновления видимости изображений
 });
+
+// Функция для обработки нажатия на трубу
+function handleTubeClick(group) {
+    console.log('Hello,Puparevich!')
+    if (counter2 >= 40) {
+        document.getElementById(group).style.display = 'flex'; // Показываем нужную группу
+        setTimeout(() => {
+            document.getElementById(group).style.display = 'none'; // Скрываем группу через 10 секунд
+            counter1 += 300;
+        }, 10000);
+        counter2 -= 40; // Уменьшаем counter2 на 40
+        updateCounter('counter2', counter2); // Обновляем счетчик на странице
+    }
+}
+
+const tubeFirst = document.getElementById('tubeFirst')
+tubeFirst.addEventListener('click', ()=>handleTubeClick('groupFirst'))
+
+const tubeSecond = document.getElementById('tubeSecond')
+tubeSecond.addEventListener('click', ()=>handleTubeClick('groupSecond'))
+
+const tubeThird = document.getElementById('tubeThird')
+tubeThird.addEventListener('click', ()=>handleTubeClick('groupThird'))
+
+// Обновляем значения счетчиков на странице
+updateCounter('counter1', counter1);
+updateCounter('counter2', counter2);
+updateCounter('counter3', counter3);
+
+// Функция для добавления 300 к counter1 после скрытия всех групп
+setInterval(() => {
+    if (document.getElementById('groupFirst').style.display === 'none' &&
+        document.getElementById('groupSecond').style.display === 'none' &&
+        document.getElementById('groupThird').style.display === 'none') {
+        updateCounter('counter1', counter1);
+    }
+}, 1000);
