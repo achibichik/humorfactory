@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завод юмора</title>
+    <link rel="stylesheet" href="./stylesheet/styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="fixedMenu">
+        <div class="menuSection" id="section1">
+            <img src="./images/Money.svg" alt="Icon1">
+            <span id="counter1">0</span>
+        </div>
+        <div class="menuSection" id="section2">
+            <img src="./images/Pill.svg" alt="Icon2">
+            <span id="counter2">0</span>
+        </div>
+        <div class="menuSection" id="section3">
+            <img src="./images/Resurses.svg" alt="Icon3">
+            <span id="counter3">0</span>
+        </div>
+    </div>
+    <div id="firstScreen">
+        <div id="pipeFirst">
+            <img src="./images/graffityFirst.svg" alt="graffityFirst" id="graffityFirst" onclick="toggleImage('graffityFirst')">
+            <img src="./images/graffitySecond.svg" alt="graffitySecond" id="graffitySecond" onclick="toggleImage('graffitySecond')">
+        </div>
+        <div id="pipeSecond">
+            <img src="./images/graffityThird.svg" alt="graffityThird" id="graffityThird" onclick="toggleImage('graffityThird')">
+            <img src="./images/graffityFourth.svg" alt="graffityFourth" id="graffityFourth" onclick="toggleImage('graffityFourth')">
+        </div>
+        <div id="pipeThird">
+            <img src="./images/graffityFifth.svg" alt="graffityFifth" id="graffityFifth" onclick="toggleImage('graffityFifth')">
+            <img src="./images/graffitySixth.svg" alt="graffitySixth" id="graffitySixth" onclick="toggleImage('graffitySixth')">
+        </div>
+    </div>
+    <div id="secondScreen">
+        <div id="utilityRoom">
+            <div id="leftPartUtility">
+                <img src="./images/pipeline.svg" alt="pipeline">
+                <div id="groupKnobLine">
+                    <div id="knobSmall"></div>
+                    <div id="lineSmall"></div>
+                </div>
+            </div>
+            <div id="rightPartUtility">
+                <div id="groupKnobShield">
+                    <div id="knobMedium"></div>
+                    <div id="Shield"></div>
+                </div>
+                <img src="./images/lineLarge.svg" alt="lineLarge">
+            </div>
+        </div>
+        <div id="resourcesRoom">
+            <div id="robotHand"></div>
+            <div id="boxes">
+                <!-- ПЕРЕДЕЛАТЬ!!!!!! -->
+                <div id="boxFirst" class="box" onclick="adjustWidth('boxFirst')">
+                    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="70%" height="62%" fill="#FFB200"/>
+                    </svg>
+                </div>
+                <div id="downLine"> <!-- ПЕРЕДЕЛАТЬ!!!!!! -->
+                    <div id="boxSecond" class="box" onclick="adjustWidth('boxSecond')">
+                        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="75%" height="64%" fill="#FFB200"/>
+                        </svg>
+                    </div>
+                    <div id="boxThird" class="box" onclick="adjustWidth('boxThird')">
+                        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="70%" height="65%" fill="#008D5E"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="thirdScreen">
+        <div id="leftPart">
+            <div id="pillsLeft">
+                <img src="./images/pillLeft.svg" alt="pillLeft">
+                <img src="./images/pillRight.svg" alt="pillRight">
+                <img src="./images/pillLeft.svg" alt="pillLeft">
+                <img src="./images/pillRight.svg" alt="pillRight">
+                <img src="./images/pillLeft.svg" alt="pillLeft">
+                <img src="./images/pillRight.svg" alt="pillRight">
+            </div>
+        </div>
+        <div id="centerPart">
+            <div id="topKnob">
+                <img src="./images/knobHorizontal.svg" alt="knobHorizontal">
+                <img src="./images/knobHorizontal.svg" alt="knobHorizontal">
+            </div>
+            <div id="heartCenter"></div>
+            <div id="resurses">
+                <img id="resourse1" src="./images/resourse1.svg" alt="resourse1">
+                <img id="resourse2" src="./images/resourse2.svg" alt="resourse2">
+                <img id="resourse3" src="./images/resourse3.svg" alt="resourse3">
+                <img id="resourse4" src="./images/resourse4.svg" alt="resourse4">
+                <img id="resourse5" src="./images/resourse5.svg" alt="resourse5">
+                <img id="resourse6" src="./images/resourse6.svg" alt="resourse6">
+            </div>
+            <div id="bottomKnob">
+                <img src="./images/knobHorizontal.svg" alt="knobHorizontal">
+                <img src="./images/knobHorizontal.svg" alt="knobHorizontal">
+            </div>
+        </div>
+        <div id="rightPart">
+            <div id="pillsRight">
+                <img src="./images/pillLeft.svg" alt="pillLeft">
+                <img src="./images/pillRight.svg" alt="pillRight">
+                <img src="./images/pillLeft.svg" alt="pillLeft">
+                <img src="./images/pillRight.svg" alt="pillRight">
+                <img src="./images/pillLeft.svg" alt="pillLeft">
+                <img src="./images/pillRight.svg" alt="pillRight">
+            </div>
+        </div>
+    </div>
+    <div id="fourthScreen">
+        <div id="details">
+            <div id="ventPartDetails">
+                <img src="./images/ventiltionRight.svg" alt="ventiltionRight">
+                <img src="./images/ventiltionLeft.svg" alt="ventiltionLeft">
+            </div>
+            <div id="clockPartDetails">
+                <img src="./images/clockLeft.svg" alt="clockLeft">
+                <img src="./images/clockRight.svg" alt="clockRight">
+            </div>
+        </div>
+        <div id="tubeFirst">
+            <img src="./images/patchYellow.svg" alt="patchYellow">
+            <img src="./images/patchGreen.svg" alt="patchGreen">
+        </div>
+        <div id="tubeSecond">
+            <img src="./images/elementSmall.svg" alt="elementSmall">
+        </div>
+        <div id="tubeThird">
+            <img src="./images/patchGreen.svg" alt="patchGreen">
+            <img src="./images/patchYellow.svg" alt="patchYellow">
+        </div>
+    </div>
+    <div id="fifthScreen">
+        <img src="./images/ppipelineSmall.svg" alt="ppipelineSmall">
+        <div id="carFirst"></div>
+        <div id="carSecond"></div>
+        <div id="carThird"></div>
+    </div>
+</body>
+</html>

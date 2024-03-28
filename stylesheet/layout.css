@@ -1,0 +1,394 @@
+body {
+    width: auto;
+    background-color: #6038D3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Dela Gothic One', sans-serif;
+}
+#fixedMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    gap: 24px;
+    z-index: 100;
+}
+.menuSection {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.menuSection img {
+    width: 70px;
+    height: 70px;
+}
+#counter1, #counter2, #counter3 {
+    font-size: 44px;
+    color: white;
+    text-shadow: 
+        -4px 0 0 black,  
+         4px 0 0 black,
+         0 -4px 0 black,
+         0 4px 0 black;
+}
+#firstScreen {
+    height: 1024px;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: center;
+}
+#pipeFirst, #pipeThird {
+    background-image: url('../images/bigTube.svg');
+    position: relative;
+    width: 474px;
+    height: 0;
+    padding-top: 816px;
+    clip-path: polygon(32% 0%, 71% 0%, 100% 100%, 0% 100%);
+    overflow: hidden;
+}
+#graffityFirst{
+    position: absolute;
+    z-index: 100;
+    margin-top: -800px;
+}
+#graffitySecond {
+    position: absolute;
+    z-index: 100;
+    margin-top: -400px;
+}
+#graffityThird{
+    position: absolute;
+    z-index: 100;
+    margin-top: -625px;
+}
+#graffityFourth {
+    position: absolute;
+    z-index: 100;
+    margin-top: -400px;
+    margin-left: 46px;
+}
+#graffityFifth{
+    position: absolute;
+    z-index: 100;
+    margin-top: -822px;
+}
+#graffitySixth {
+    position: absolute;
+    z-index: 100;
+    margin-top: -347px;
+}
+#pipeSecond {
+    background-image: url('../images/smallTube.svg');
+    position: relative;
+    width: 412px;
+    height: 0;
+    padding-top: 627px;
+    clip-path: polygon(29% 0%, 68% 0%, 100% 100%, 0% 100%);
+    overflow: hidden;
+}
+#secondScreen {
+    width: 1360px;
+    height: 700px;
+    display: flex;
+    flex-direction: row;
+}
+#utilityRoom {
+    width: 600px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#leftPartUtility {
+    display: flex;
+    flex-direction: row;
+}
+#groupKnobLine {
+    width: 110px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#knobSmall {
+    width: 61px;
+    height: 187px;
+    background-image: url('../images/knobSmall.svg');
+}
+#lineSmall {
+    width: 115px;
+    height: 31px;
+    background-image: url('../images/lineSmall.svg');
+}
+#rightPartUtility {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -306px;
+    margin-left: -24px;
+    gap: 13px;
+}
+#groupKnobShield {
+    width: 335px;
+    height: 262px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#knobMedium {
+    width: 61px;
+    height: 256px;
+    background-image: url('../images/knobMedium.svg');
+}
+#Shield {
+    width: 216px;
+    height: 262px;
+    background-image: url('../images/shield.svg');
+}
+#resourcesRoom {
+    width: 760px;
+    height: 700px;
+    background-image: url('../images/roomBackground.svg');
+    border: solid black 4px;
+    border-top: none;
+}
+#robotHand {
+    width: 688px;
+    height: 402px;
+    background-image: url('../images/robotHand.svg');
+    margin-left: 84px;
+    margin-top: -14px;
+}
+#boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -196px;
+    margin-left: -54px;
+    justify-content: center;
+}
+.box {
+    cursor: pointer;
+}
+#boxFirst {
+    width: 217px;
+    height: 177px;
+    background-image: url('../images/boxSmall.svg');
+    margin-left: 310px;
+    border: solid black 4px;
+    border-bottom: none;
+}
+#boxFirst svg {
+    margin: 15%;
+}
+#downLine {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+#boxSecond {
+    width: 306px;
+    height: 205px;
+    background-image: url('../images/boxMedium.svg');
+    border: solid black 4px;
+    border-right: none;
+}
+#boxSecond svg {
+    margin: 13%;
+}
+#boxThird {
+    width: 396px;
+    height: 324px;
+    background-image: url('../images/boxLarge.svg');
+    border: solid black 4px;
+}
+#boxThird svg {
+    margin: 15%;
+}
+#thirdScreen {
+    display: flex;
+    flex-direction: row;
+    margin: 40px 0;
+}
+#leftPart {
+    width: 292px;
+    height: 781px;
+    background-image: url('../images/conveyorLeft.svg');
+}
+#centerPart {
+    position: relative;
+    width: 758px;
+    height: 775px;
+    background-image: url('../images/flask.svg');
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#heartCenter {
+    width: 308px;
+    height: 308px;
+    background-image: url('../images/Step0.svg');
+    margin-right: 10px;
+}
+#resurses {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#resurses img {
+    cursor: move;
+}
+#resourse1 {
+    position: absolute;
+    top: 162px;
+    left: 50px;
+}
+#resourse2 {
+    position: absolute;
+    top: 20px;
+    left: 310px;
+}
+#resourse3 {
+    position: absolute;
+    top: 162px;
+    left: 600px;
+}
+#resourse4 {
+    position: absolute;
+    bottom: 162px;
+    left: 50px;
+}
+#resourse5 {
+    position: absolute;
+    bottom: 30px;
+    left: 340px;
+}
+#resourse6 {
+    position: absolute;
+    bottom: 162px;
+    left: 600px;
+}
+#rightPart {
+    width: 292px;
+    height: 781px;
+    background-image: url('../images/conveyorRight.svg');
+}
+#pillsLeft {
+    width: 120px;
+    margin-left: 40px;
+    margin-top: 60px;
+    gap: 22px;
+    flex-direction: column;
+    display: flex;
+}
+#pillsRight {
+    width: 120px;
+    margin-left: 130px;
+    margin-top: 60px;
+    gap: 22px;
+    flex-direction: column;
+    display: flex;
+}
+#topKnob {
+    width: 752px;
+    height: 61px;
+    display: flex;
+    justify-content: space-between;
+}
+#bottomKnob {
+    width: 752px;
+    height: 61px;
+    display: flex;
+    justify-content: space-between;
+}
+#fourthScreen {
+    width: 1360px;
+    height: 300px;
+    background-image: url('../images/pipeBackground.svg');
+    border: solid black 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 72px;
+}
+#details {
+    position: absolute;
+    width: 1392px;
+    height: 239px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    gap: 20px;
+}
+#ventPartDetails {
+    width: 1312px;
+    height: 148px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 36px;
+    margin-top: 20px;
+}
+#clockPartDetails {
+    width: 1392px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#tubeFirst, #tubeThird {
+    width: 312px;
+    height: 388px;
+    background-image: url('../images/pipePink.svg');
+    border: solid black 4px;
+}
+#tubeFirst img {
+    margin-top: 113px;
+    margin-left: 22px;
+}
+#tubeSecond img {
+    margin-top: 200px;
+    margin-left: -18px;
+}
+#tubeThird img {
+    margin-top: 113px;
+    margin-left: 43px;
+    rotate: 90deg;
+}
+#tubeSecond {
+    width: 312px;
+    height: 388px;
+    background-image: url('../images/pipeBlue.svg');
+    border: solid black 4px;
+}
+#fifthScreen {
+    display: flex;
+    flex-direction: row;
+    margin-top: 180px;
+    margin-left: 30px;
+    gap: 8px;
+}
+#fifthScreen img {
+    margin-top: -200px;
+    margin-left: -76px;
+    margin-right: 22px;
+}
+#carFirst, #carThird {
+    width: 393px;
+    height: 238px;
+    background-image: url('../images/darkCar.svg');
+}
+#carSecond {
+    width: 393px;
+    height: 238px;
+    background-image: url('../images/lightCar.svg');
+}

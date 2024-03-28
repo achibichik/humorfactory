@@ -1,0 +1,15 @@
+<svg width="312" height="388" viewBox="0 0 312 388" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 2H310V386H210.261H115.304H2V2Z" fill="black" stroke="black" stroke-width="4"/>
+<path d="M0 156C0 69.8436 69.8436 0 156 0V0C242.156 0 312 69.8436 312 156V388H210.261H115.304H0V156Z" fill="#FFA9DD"/>
+<mask id="mask0_219_8543" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="312" height="388">
+<path d="M0 156C0 69.8436 69.8436 0 156 0V0C242.156 0 312 69.8436 312 156V388H210.261H115.304H0V156Z" fill="#0090FF"/>
+</mask>
+<g mask="url(#mask0_219_8543)">
+<path d="M43 336H85.5L104 369H61.5L43 336Z" fill="white" stroke="black" stroke-width="4"/>
+<path d="M98 336H140.5L159 369H116.5L98 336Z" fill="white" stroke="black" stroke-width="4"/>
+<path d="M153 336H195.5L214 369H171.5L153 336Z" fill="white" stroke="black" stroke-width="4"/>
+<path d="M208 336H250.5L269 369H226.5L208 336Z" fill="white" stroke="black" stroke-width="4"/>
+<path d="M263 336H305.5L324 369H281.5L263 336Z" fill="white" stroke="black" stroke-width="4"/>
+<path d="M-12 336H30.5L49 369H6.5L-12 336Z" fill="white" stroke="black" stroke-width="4"/>
+</g>
+</svg>

@@ -1,0 +1,16 @@
+<svg width="353" height="132" viewBox="0 0 353 132" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="2.38419e-07" y="2.82843" width="37.4122" height="140.943" rx="18.7061" transform="matrix(-0.707107 0.707107 0.707107 0.707107 247.838 0.828915)" fill="#FFB200" stroke="black" stroke-width="4"/>
+<rect x="249.539" y="2.82843" width="37.4122" height="140.943" rx="18.7061" transform="rotate(45 249.539 2.82843)" fill="#008D5E" stroke="black" stroke-width="4"/>
+<rect x="2.38419e-07" y="2.82843" width="37.4122" height="140.943" rx="18.7061" transform="matrix(-0.707107 0.707107 0.707107 0.707107 100.789 0.828915)" fill="#FFB200" stroke="black" stroke-width="4"/>
+<rect x="102.49" y="2.82892" width="37.4122" height="140.943" rx="18.7061" transform="rotate(45 102.49 2.82892)" fill="#008D5E" stroke="black" stroke-width="4"/>
+<circle cx="30.332" cy="101.774" r="13" transform="rotate(-90 30.332 101.774)" fill="#FFA9DD" stroke="black" stroke-width="4"/>
+<path d="M25.332 106.774L30.082 102.024M34.832 97.2739L30.082 102.024M30.082 102.024L25.332 97.2739L34.832 106.774" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="101.332" cy="29.7739" r="13" transform="rotate(-90 101.332 29.7739)" fill="#FFA9DD" stroke="black" stroke-width="4"/>
+<path d="M96.332 34.7739L101.082 30.0239M105.832 25.2739L101.082 30.0239M101.082 30.0239L96.332 25.2739L105.832 34.7739" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="174.332" cy="101.774" r="13" transform="rotate(-90 174.332 101.774)" fill="#FFA9DD" stroke="black" stroke-width="4"/>
+<path d="M169.332 106.774L174.082 102.024M178.832 97.2739L174.082 102.024M174.082 102.024L169.332 97.2739L178.832 106.774" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="249.332" cy="29.7739" r="13" transform="rotate(-90 249.332 29.7739)" fill="#FFA9DD" stroke="black" stroke-width="4"/>
+<path d="M244.332 34.7739L249.082 30.0239M253.832 25.2739L249.082 30.0239M249.082 30.0239L244.332 25.2739L253.832 34.7739" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="322.332" cy="101.774" r="13" transform="rotate(-90 322.332 101.774)" fill="#FFA9DD" stroke="black" stroke-width="4"/>
+<path d="M317.332 106.774L322.082 102.024M326.832 97.2739L322.082 102.024M322.082 102.024L317.332 97.2739L326.832 106.774" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

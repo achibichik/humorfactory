@@ -1,0 +1,12 @@
+<svg width="216" height="262" viewBox="0 0 216 262" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="2" y="2" width="212" height="258" rx="22" fill="#ED1919" stroke="black" stroke-width="4"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M110.5 42L40 143H85L100 135.5L90 131.5L107.5 124H85L110.5 42ZM117.75 143H130.5L105 220L176 124H143L129 131.5L133 135.5L117.75 143Z" fill="#FFB200" stroke="black" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="27" cy="25" r="13" fill="#FFB200" stroke="black" stroke-width="4"/>
+<path d="M22 20L26.75 24.75M31.5 29.5L26.75 24.75M26.75 24.75L31.5 20L22 29.5" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="27" cy="235" r="13" fill="#FFB200" stroke="black" stroke-width="4"/>
+<path d="M22 230L26.75 234.75M31.5 239.5L26.75 234.75M26.75 234.75L31.5 230L22 239.5" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="190" cy="25" r="13" fill="#FFB200" stroke="black" stroke-width="4"/>
+<path d="M185 20L189.75 24.75M194.5 29.5L189.75 24.75M189.75 24.75L194.5 20L185 29.5" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="190" cy="235" r="13" fill="#FFB200" stroke="black" stroke-width="4"/>
+<path d="M185 230L189.75 234.75M194.5 239.5L189.75 234.75M189.75 234.75L194.5 230L185 239.5" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
