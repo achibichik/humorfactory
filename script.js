@@ -69,8 +69,8 @@ function adjustWidth(boxId) {
     }
 }
 document.addEventListener("DOMContentLoaded", function() {
-    var heartCenter = document.getElementById('heartCenter');
-    var resurses = document.getElementById('resurses');
+    let heartCenter = document.getElementById('heartCenter');
+    let resurses = document.getElementById('resurses');
     const backgroundImages = [
         "url(./images/Step0.svg)",
         "url(./images/Step1.svg)",
@@ -83,9 +83,9 @@ document.addEventListener("DOMContentLoaded", function() {
     let numberOfImagesMoved = 0; // Переменная для подсчета перемещенных изображений
     
     // Функция для перетаскивания изображений
-    var draggingElement = null;
-    var initialX = 0;
-    var initialY = 0;
+    let draggingElement = null;
+    let initialX = 0;
+    let initialY = 0;
 
     function startDrag(event) {
         draggingElement = event.target;
@@ -97,8 +97,8 @@ document.addEventListener("DOMContentLoaded", function() {
     function drag(event) {
         if (draggingElement) {
             event.preventDefault();
-            var newX = event.clientX - initialX;
-            var newY = event.clientY - initialY;
+            let newX = event.clientX - initialX;
+            let newY = event.clientY - initialY;
             draggingElement.style.left = newX + 'px';
             draggingElement.style.top = newY + 'px';
         }
@@ -124,8 +124,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Функция для обновления видимости изображений в зависимости от значения counter3
     function updateResourceVisibility() {
-        var resources = document.querySelectorAll('#resurses img');
-        var heartCenter = document.getElementById('heartCenter');
+        let resources = document.querySelectorAll('#resurses img');
+        let heartCenter = document.getElementById('heartCenter');
         const heartRect = heartCenter.getBoundingClientRect()
         resources.forEach(function(img, index) {
             const imgRect = img.getBoundingClientRect()
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function() {
             } else if (img.style.display != 'none') {
                 resoursesInHeart.delete(img)
             }
-            var threshold = (index + 1) * 20;
+            let threshold = (index + 1) * 20;
             if (counter3 >= threshold && !resoursesInHeart.has(img)) {
                 img.style.display = 'block';
             } else {
@@ -151,19 +151,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Функция для обработки нажатия на изображения в #pillsLeft и #pillsRight
     function handlePillClick(event) {
-        var clickedImg = event.target;
+        let clickedImg = event.target;
         clickedImg.style.display = 'none'; // Делаем выбранное изображение невидимым
         counter2 += 10; // Увеличиваем значение counter2 на 10
         updateCounter('counter2', counter2); // Обновляем отображение счетчика на странице
     }
 
     // Назначаем обработчики событий для изображений в #pillsLeft и #pillsRight
-    var pillsLeftImgs = document.querySelectorAll('#pillsLeft img');
+    let pillsLeftImgs = document.querySelectorAll('#pillsLeft img');
     pillsLeftImgs.forEach(function(img) {
         img.addEventListener('click', handlePillClick);
     });
 
-    var pillsRightImgs = document.querySelectorAll('#pillsRight img');
+    let pillsRightImgs = document.querySelectorAll('#pillsRight img');
     pillsRightImgs.forEach(function(img) {
         img.addEventListener('click', handlePillClick);
     });
@@ -178,8 +178,8 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('pillsRight').style.display = 'flex';
     
             // Также делаем видимыми alertArrowLeft и alertArrowRight
-            var alertArrowLeft = document.getElementById('alertArrowLeft');
-            var alertArrowRight = document.getElementById('alertArrowRight');
+            let alertArrowLeft = document.getElementById('alertArrowLeft');
+            let alertArrowRight = document.getElementById('alertArrowRight');
             alertArrowLeft.style.display = 'flex';
             alertArrowRight.style.display = 'flex';
     
