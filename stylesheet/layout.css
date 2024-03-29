@@ -234,7 +234,7 @@ body {
     z-index: 100;
     position: absolute;
     left: 64%;
-    bottom: -64%;
+    bottom: -900px;
 }
 #robotHand {
     width: 688px;
@@ -303,14 +303,14 @@ body {
     display: none;
     z-index: 100;
     left: 22vw;
-    bottom: -145%;
+    bottom: -1700px;
 }
 #alertArrowRight {
     position: absolute;
     display: none;
     z-index: 100;
     right: 22vw;
-    bottom: -145%;
+    bottom: -1700px;
 }
 #leftPart {
     width: 292px;
