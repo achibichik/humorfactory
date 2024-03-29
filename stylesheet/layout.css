@@ -233,8 +233,8 @@ body {
 #alertRoundFirst {
     z-index: 100;
     position: absolute;
-    left: 62%;
-    bottom: -74%;
+    left: 64%;
+    bottom: -104%;
 }
 #robotHand {
     width: 688px;
@@ -303,14 +303,14 @@ body {
     display: none;
     z-index: 100;
     left: 22vw;
-    bottom: -140vh;
+    bottom: -200vh;
 }
 #alertArrowRight {
     position: absolute;
     display: none;
     z-index: 100;
     right: 22vw;
-    bottom: -140vh;
+    bottom: -200vh;
 }
 #leftPart {
     width: 292px;
@@ -421,7 +421,7 @@ body {
     z-index: 100;
     position: absolute;
     left: 40%;
-    bottom: -180%;
+    bottom: -220%;
 }
 #details {
     width: 96%;
