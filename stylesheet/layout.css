@@ -1,48 +1,120 @@
 body {
     width: auto;
+    margin: 0 auto;
     background-color: #6038D3;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'Dela Gothic One', sans-serif;
 }
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 300;
+}
+
+.popup-content {
+    width: 50%;
+    background-color: #6038D3;
+    padding: 32px;
+    border: 4px solid black;
+    border-radius: 24px;
+    text-align: center;
+    color: white;
+}
+  
+.popup-content h1 {
+    font-size: 48px;
+    margin-bottom: 32px;
+    font-family: 'Dela Gothic One', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.popup-content p {
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 1px;
+}
+  
+.popup-content button {
+    background-color: #008D5E;
+    border: 4px solid black;
+    border-radius: 24px;
+    padding: 20px 40px;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Dela Gothic One', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
 #fixedMenu {
     position: fixed;
     top: 0;
     left: 0;
-    padding: 24px;
+    padding: 2.4vh; 
     display: flex;
     align-items: center;
     justify-content: start;
     width: 100%;
-    gap: 24px;
-    z-index: 100;
+    gap: 2.4vh; 
+    z-index: 200;
 }
+
 .menuSection {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 1.6vh; 
 }
+
 .menuSection img {
-    width: 70px;
-    height: 70px;
+    width: 3.64vw; 
+    height: 3.64vw; 
 }
+
 #counter1, #counter2, #counter3 {
-    font-size: 44px;
+    font-size: 2.29vw; 
     color: white;
     text-shadow: 
-        -4px 0 0 black,  
-         4px 0 0 black,
-         0 -4px 0 black,
-         0 4px 0 black;
+        -0.21vw 0 0 black,  
+        0.21vw 0 0 black,
+        0 -0.21vw 0 black,
+        0 0.21vw 0 black;
 }
 #firstScreen {
-    height: 1024px;
+    height: 120vh;
     display: flex;
     flex-direction: row;
     align-items: end;
     justify-content: center;
 }
+
+#bubbles {
+    justify-content: center;
+    position: absolute;
+    display: flex;
+    z-index: 100;
+    top: -160px;
+    gap: 3%;
+    align-items: end;
+}
+
+#bubbleFirst, #bubbleThird  {
+    margin-bottom: -10px;
+}
+
 #pipeFirst, #pipeThird {
     background-image: url('../images/bigTube.svg');
     position: relative;
@@ -92,15 +164,15 @@ body {
     clip-path: polygon(29% 0%, 68% 0%, 100% 100%, 0% 100%);
     overflow: hidden;
 }
+
+/* Второй экран */
+
 #secondScreen {
-    width: 1360px;
-    height: 700px;
+    width: auto;
     display: flex;
     flex-direction: row;
 }
 #utilityRoom {
-    width: 600px;
-    height: 700px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -110,8 +182,6 @@ body {
     flex-direction: row;
 }
 #groupKnobLine {
-    width: 110px;
-    height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -131,9 +201,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -306px;
-    margin-left: -24px;
-    gap: 13px;
+    margin-top: -52%;
+    margin-left: -4%;
+    gap: 0.6vh;
 }
 #groupKnobShield {
     width: 335px;
@@ -154,25 +224,31 @@ body {
     background-image: url('../images/shield.svg');
 }
 #resourcesRoom {
-    width: 760px;
+    width: 770px;
     height: 700px;
     background-image: url('../images/roomBackground.svg');
     border: solid black 4px;
     border-top: none;
 }
+#alertRoundFirst {
+    z-index: 100;
+    position: absolute;
+    left: 62%;
+    bottom: -74%;
+}
 #robotHand {
     width: 688px;
     height: 402px;
     background-image: url('../images/robotHand.svg');
-    margin-left: 84px;
-    margin-top: -14px;
+    margin-left: 6vw;
+    margin-top: -0.8vh;
 }
 #boxes {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -196px;
-    margin-left: -54px;
+    margin-top: -200px;
+    margin-left: -2%;
     justify-content: center;
 }
 .box {
@@ -213,10 +289,28 @@ body {
 #boxThird svg {
     margin: 15%;
 }
+
+/* Третий экран */
+
 #thirdScreen {
     display: flex;
     flex-direction: row;
-    margin: 40px 0;
+    margin: 2% 0;
+    gap: 2vw;
+}
+#alertArrowLeft {
+    position: absolute;
+    display: none;
+    z-index: 100;
+    left: 22vw;
+    bottom: -140vh;
+}
+#alertArrowRight {
+    position: absolute;
+    display: none;
+    z-index: 100;
+    right: 22vw;
+    bottom: -140vh;
 }
 #leftPart {
     width: 292px;
@@ -310,8 +404,11 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
+/* Четвертый экран */
+
 #fourthScreen {
-    width: 1360px;
+    width: 80%;
     height: 300px;
     background-image: url('../images/pipeBackground.svg');
     border: solid black 4px;
@@ -320,30 +417,34 @@ body {
     justify-content: center;
     gap: 72px;
 }
-#details {
+#alertRoundSecond {
+    z-index: 100;
     position: absolute;
-    width: 1392px;
-    height: 239px;
+    left: 40%;
+    bottom: -180%;
+}
+#details {
+    width: 96%;
+    align-items: center;
+    position: absolute;
     display: flex;
     flex-direction: column;
     z-index: 100;
-    gap: 20px;
+    gap: 1vh;
 }
 #ventPartDetails {
-    width: 1312px;
-    height: 148px;
+    width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 36px;
-    margin-top: 20px;
+    margin-top: 2%;
 }
 #clockPartDetails {
-    width: 1392px;
-    height: 70px;
+    width: 86%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 #tubeFirst, #tubeThird {
     width: 312px;
@@ -370,12 +471,14 @@ body {
     background-image: url('../images/pipeBlue.svg');
     border: solid black 4px;
 }
+
+/* Пятый экран */
+
 #fifthScreen {
     display: flex;
     flex-direction: column;
     margin-top: 180px;
-    margin-left: 30px;
-    gap: 8px;
+    margin-left: 2vw;
 }
 #fifthScreen img {
     margin-top: -200px;
@@ -392,7 +495,7 @@ body {
 #cars {
     display: flex;
     flex-direction: row;
-    gap: 8px;
+    gap: 1vw;
 }
 #carFirst, #carThird {
     width: 393px;
@@ -405,4 +508,90 @@ body {
     height: 238px;
     background-image: url('../images/lightCar.svg');
     position: relative;
+}
+
+/* Медиа-запрос для экранов до 1440px */
+@media only screen and (max-width: 1440px) {
+    #tubeThird,
+    #tubeThird img,
+    #carThird,
+    #groupThird,
+    #alertRoundFirst,
+    #alertRoundSecond,
+    #alertArrowLeft,
+    #alertArrowRight {
+        display: none; 
+    }
+}
+
+/* Медиа-запрос для экранов до 1366px */
+@media only screen and (max-width: 1366px) {
+    .menuSection img {
+        width: 7vw; 
+        height: 7vw; 
+    }
+    #counter1, #counter2, #counter3 {
+        font-size: 4.5vw; 
+        text-shadow: 
+            -0.42vw 0 0 black,  
+            0.42vw 0 0 black,
+            0 -0.42vw 0 black,
+            0 0.42vw 0 black;
+    }
+    #pipeThird,
+    #graffityFifth,
+    #graffitySixth,
+    #bubbleThird,
+    #carThird,
+    #groupThird {
+        display: none; 
+    }
+    #secondScreen {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+    #thirdScreen {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+    #leftPart, #rightPart {
+        rotate: 270deg;
+        margin: -30%;
+    }
+}
+
+/* Медиа-запрос для экранов до 1024px */
+@media only screen and (max-width: 1024px) {
+
+    .menuSection img {
+        width: 8vw; 
+        height: 8vw; 
+    }
+    
+    #tubeSecond,
+    #tubeSecond img,
+    #carSecond,
+    #groupSecond,
+    #bubbleSecond {
+        display: none; 
+    }
+}
+/* Медиа-запрос для экранов до 768px */
+@media only screen and (max-width: 768px) {
+    #counter1, #counter2, #counter3 {
+        font-size: 6vw;
+        text-shadow: 
+            -0.84vw 0 0 black,  
+            0.84vw 0 0 black,
+            0 -0.84vw 0 black,
+            0 0.84vw 0 black;
+    }
+    #pipeSecond,
+    #pipeThird,
+    #graffityThird,
+    #graffityFourth {
+        display: none; 
+    }
 }

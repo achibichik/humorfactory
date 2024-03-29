@@ -4,13 +4,21 @@ let counter3 = 0;
 let currentBackgroundIndex = 0;
 const resoursesInHeart = new Set()
 
+const closeButton = document.getElementById('closeButton');
+const popup = document.getElementById('popup');
+
+// Добавляем обработчик события для клика на кнопку
+closeButton.addEventListener('click', function() {
+    // Прячем попап
+    popup.style.display = 'none';
+});
+
 // Функция для обновления счетчика на странице
 function updateCounter(counterId, value) {
     document.getElementById(counterId).textContent = value;
 }
 
 // Обновляем значения счетчиков на странице
-//ПЕРЕДЕЛАИТЬ!
 updateCounter('counter1', counter1);
 updateCounter('counter2', counter2);
 updateCounter('counter3', counter3);
@@ -23,14 +31,12 @@ function toggleImage(imageId) {
         image.style.display = 'none';
         setTimeout(function () {
             image.style.display = 'block';
-            // ВЫНЕСТИ В КОНСТАНТЫ!
-        }, 60_000); // минута в миллисекундах
+        }, 2000);
     }
 }
 
 function adjustWidth(boxId) {
 
-    // ПЕРЕДЕЛАТЬ! НА CONST
     let box = document.getElementById(boxId);
     let svg = box.querySelector('svg');
     
@@ -54,6 +60,13 @@ function adjustWidth(boxId) {
 
     // Обновляем ширину svg
     svg.setAttribute('width', newWidth + '%');
+    
+    // Проверяем, равен ли newWidth 100, и делаем alertRoundFirst видимым, если да
+    if (newWidth === 100) {
+        alertRoundFirst.style.display = 'block'; // делаем alertRoundFirst видимым
+    } else {
+        alertRoundFirst.style.display = 'none'; // скрываем alertRoundFirst
+    }
 }
 document.addEventListener("DOMContentLoaded", function() {
     var heartCenter = document.getElementById('heartCenter');
@@ -94,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function endDrag(event) {
         if (draggingElement) {
             draggingElement.style.display = 'none';
-            switchBackground(); // Переключаем фон независимо от того, куда отпущена мышь
+            switchBackground(); 
             
             // Уменьшаем counter3 на 20 за каждый перемещенный img
             counter3 -= numberOfImagesMoved * 20;
@@ -158,11 +171,15 @@ document.addEventListener("DOMContentLoaded", function() {
     function switchBackground() {
         currentBackgroundIndex = (currentBackgroundIndex + 1) % backgroundImages.length;
         heartCenter.style.backgroundImage = backgroundImages[currentBackgroundIndex];
-
+    
         // Если достигнуто последнее изображение, делаем #pillsLeft и #pillsRight видимыми
         if (currentBackgroundIndex === backgroundImages.length - 1) {
             document.getElementById('pillsLeft').style.display = 'flex';
             document.getElementById('pillsRight').style.display = 'flex';
+    
+            // Также делаем видимыми alertArrowLeft и alertArrowRight
+            document.getElementById('alertArrowLeft').style.display = 'flex';
+            document.getElementById('alertArrowRight').style.display = 'flex';
         }
     }
 
@@ -177,7 +194,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Функция для обработки нажатия на трубу
 function handleTubeClick(group) {
-    console.log('Hello,Puparevich!')
     if (counter2 >= 40) {
         document.getElementById(group).style.display = 'flex'; // Показываем нужную группу
         setTimeout(() => {
@@ -186,6 +202,8 @@ function handleTubeClick(group) {
         }, 10000);
         counter2 -= 40; // Уменьшаем counter2 на 40
         updateCounter('counter2', counter2); // Обновляем счетчик на странице
+        // Скрываем alertRoundSecond
+        document.getElementById('alertRoundSecond').style.display = 'none';
     }
 }
 
@@ -210,4 +228,4 @@ setInterval(() => {
         document.getElementById('groupThird').style.display === 'none') {
         updateCounter('counter1', counter1);
     }
-}, 1000);
+}, 800);
