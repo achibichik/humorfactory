@@ -235,6 +235,7 @@ body {
     position: absolute;
     left: 64%;
     bottom: -900px;
+    pointer-events: none; /* отключение взаимодействия с элементом */
 }
 #robotHand {
     width: 688px;
@@ -304,6 +305,7 @@ body {
     z-index: 100;
     left: 22vw;
     bottom: -1700px;
+    pointer-events: none; /* отключение взаимодействия с элементом */
 }
 #alertArrowRight {
     position: absolute;
@@ -311,6 +313,7 @@ body {
     z-index: 100;
     right: 22vw;
     bottom: -1700px;
+    pointer-events: none; /* отключение взаимодействия с элементом */
 }
 #leftPart {
     width: 292px;
@@ -422,6 +425,7 @@ body {
     position: absolute;
     left: 40%;
     bottom: -220%;
+    pointer-events: none; /* отключение взаимодействия с элементом */
 }
 #details {
     width: 96%;

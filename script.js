@@ -178,11 +178,18 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('pillsRight').style.display = 'flex';
     
             // Также делаем видимыми alertArrowLeft и alertArrowRight
-            document.getElementById('alertArrowLeft').style.display = 'flex';
-            document.getElementById('alertArrowRight').style.display = 'flex';
+            var alertArrowLeft = document.getElementById('alertArrowLeft');
+            var alertArrowRight = document.getElementById('alertArrowRight');
+            alertArrowLeft.style.display = 'flex';
+            alertArrowRight.style.display = 'flex';
+    
+            // Запускаем таймер для скрытия alertArrowLeft и alertArrowRight через 30 секунд
+            setTimeout(function() {
+                alertArrowLeft.style.display = 'none';
+                alertArrowRight.style.display = 'none';
+            }, 10000); // 
         }
     }
-
     // Добавление обработчиков событий
     resurses.addEventListener('mousedown', startDrag);
     document.addEventListener('mousemove', drag);
